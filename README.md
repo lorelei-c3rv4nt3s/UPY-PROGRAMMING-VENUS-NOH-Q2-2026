@@ -1,2 +1,12 @@
 # UPY-PROGRAMMING-VENUS-NOH-Q2-2026
-Guardado de pryectos y tareas de la materia 
+
+Programa para conjugar verbos regulares en español
+
+
+
+Declaración de IA:
+
+
+
+Use Ia para hacer el Flow chart 
+
