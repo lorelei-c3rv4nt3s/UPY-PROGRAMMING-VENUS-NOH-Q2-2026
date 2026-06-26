@@ -1,0 +1,19 @@
+#INPUT
+Get the verb of conjugation
+
+#PROCESS
+Put pronous   (yo,tu,el,nosotros,vosotros, ellos)
+Get terminations
+  'ar'  : [ 'o', 'as', 'a', 'amos', 'ais', 'an'],
+    'er': [ 'o', 'es', 'e', 'emos', 'eis', 'en'],
+    'ir': [ 'o', 'es', 'e', 'imos', 'is', 'en']
+
+get the stem          #[:-2]
+get ending            #[-2:]
+get endignh list      #terminations[ending]
+
+#OUTPUT
+for index, pronoun in enumerate(pronouns):
+    termination = endings_list[index]
+    print(f"{pronoun} {stem}{termination}")
+
