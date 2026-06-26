@@ -1,0 +1,91 @@
+#INPUT
+Definition option is equal "continue"
+Definition approved_list is equal empty list
+Definition pendients_list is equal empty list
+
+Get user
+Get password
+
+#PROCESS
+While user is not in users database or password is different from user password
+    Display "Usuario o contraseña incorrectos. Intente de nuevo."
+    Get user
+    Get password
+End While
+
+Display "Bienvenido"
+Definition rol is equal to user rol
+
+If rol is equal "student"
+    #PROCESS FOR STUDENT
+    For each materia in Materias
+        Get nota
+        If nota is major or equal 7
+            Add materia to approved_list
+        Else
+            Add materia to pendients_list
+        End If
+    End For
+
+Elif rol is equal "professor"
+    #PROCESS FOR PROFESSOR
+    Display "Lista de Estudiantes:"
+    For each estudiante in Notas
+        Display estudiante name
+    End For
+    
+    Display "Lista de Materias:"
+    For each materia in Materias
+        Display materia
+    End For
+    
+    Display "¿Desea cambiar la calificación de un estudiante? (si/no):"
+    Get cambio
+    
+    While cambio is equal "si"
+        Get estudiante_elegido
+        Get materia_elegida
+        
+        If estudiante_elegido exists in Notas and materia_elegida exists in Materias
+            Get nueva_nota
+            Display "¿Está seguro? (si/no):"
+            Get seguridad
+            
+            If seguridad is equal "si"
+                Update estudiante_elegido note with nueva_nota
+                For each m in Materias
+                    Display m and note
+                End For
+            End If
+        Else
+            Display "Estudiante o Materia no encontrados"
+        End If
+        
+        Display "¿Desea cambiar otra nota? (si/no):"
+        Get cambio
+    End While
+
+Elif rol is equal "coordinator"
+    #PROCESS FOR COORDINATOR
+    Display "Profesores:"
+    For each usr in Usuarios
+        If usr rol is equal "professor"
+            Display usr name
+        End If
+    End For
+    
+    Display table header ("Estudiante | Discrete Math | Programming | English II")
+    For each estudiante in Notas
+        Display estudiante name and notes for Discrete Mathematics, Programming, and English II
+    End For
+End If
+
+#OUTPUT
+If rol is equal "student"
+    Display ("Boleta de ")
+    Display ("Aprobadas: ", approved_list)
+    Display ("Pendientes: ", pendients_list)
+Else
+    Display ("Proceso finalizado correctamente")
+End If
+Ask it is the end
