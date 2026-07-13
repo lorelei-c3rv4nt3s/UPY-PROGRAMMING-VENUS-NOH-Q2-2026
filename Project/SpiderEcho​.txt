@@ -1,0 +1,32 @@
+SpiderEcho​
+
+
+PROGRAMMING​
+Noh Cervantes Venus Lorelei
+Data and AI Engineering​
+2nd Quadrimestrer           May-August​           2026
+
+INTRODUCTION
+When you have a lot activities, assignments or commitments,
+ You surely forget it and have trouble doing it on time, do you need a solution?​
+
+​Many people want to improve this, but the typical alarms or apps are boring,
+ this one is not because it is personalized and was made with the purpose of making it enjoyable​
+
+
+OBJECTIVE
+It is about automating the work of remembering pending tasks, and being able to delete or add to the calendar, 
+and also be able to customize it to taste, this in order to be able to complete the duties.
+
+PROBLEM STATEMENT​
+Help the user have better organization, dedication to their
+duties in a fun and pleasant way​
+
+I aim to streamline the way of remembering, in such a way
+that it is in an environment where they are daily or use it
+constantly.​
+
+​This project wants to resolve these controversies in daily life in
+a simple way.
+
+                                                     
