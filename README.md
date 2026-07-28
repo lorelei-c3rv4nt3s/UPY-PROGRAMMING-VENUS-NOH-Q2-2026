@@ -1,6 +1,6 @@
 # UPY-PROGRAMMING-VENUS-NOH-Q2-2026
 
-Programa para conjugar verbos regulares en español
+Tareas y proyectos de programacion 
 
 
 
